@@ -11,7 +11,7 @@
 <nav>
  
     <ul>  
-          
+           
         <li><a href="#contact">Contact Us</a></li>
         <li><a href="#login">Login</a></li>
         <li><a href="#lottery">Lottery</a></li>
@@ -20,8 +20,24 @@
       </ul>
 </nav>
 <div class="container">
+
+    <div class="container1">
     <button class="btn">click me</button>
+    <div id="numb"></div>
 </div>
+</div>
+<div class="container2">
+
+</div>
+<script>
+    document.getElementsByClassName('btn')[0].onclick = function(){
+        var numb;
+        numb = Math.floor(Math.random()*(20-10)+10);
+        console.log(numb);
+        document.getElementById('numb').innerHTML = "Your  Lucky number is "+numb;
+       
+    }
+</script>
  
     
 </section>

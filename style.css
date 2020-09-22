@@ -3,6 +3,7 @@
     padding: 0;
     font-family: sans-serif;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -34,11 +35,11 @@ ul {
    background-blend-mode: color;
  }
  .container .btn {
-  position: absolute;
+  position: relative;
   top: 77%;
   left: 45%;
-  background-color:white;
-  color:grey;
+  background-color:purple;
+  color:white;
   font-size: 36px;
   padding: 12px 24px;
   border: none;
@@ -49,4 +50,19 @@ ul {
 
 .container .btn:hover {
   background-color: black;
+}
+#numb{
+  color: white;
+  font-size: 200%;
+}
+.container1{
+  margin-top: 500px;
+}
+.container2{
+  background-image: url(img.webp);
+  background-color: violet;
+  width: 50%;
+   height: 600px;
+   float: right;
+  
 }
