@@ -6,12 +6,14 @@
     <link rel="shotcut icon" type="img/png" href="icon.webp">
     <link rel="stylesheet" href="style.css">
     <title> LOTTERY GAME </title>
+    <script src="https://kit.fontawesome.com/e5f0937a01.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
 <nav>
- 
+  
     <ul>  
-           
+        <li id="lot">LOTTO - A Lottery Game</li>
         <li><a href="#contact">Contact Us</a></li>
         <li><a href="#login">Login</a></li>
         <li><a href="#lottery">Lottery</a></li>
@@ -19,27 +21,54 @@
         
       </ul>
 </nav>
+<div id="mega">
 <div class="container">
-
     <div class="container1">
     <button class="btn">click me</button>
     <div id="numb"></div>
 </div>
 </div>
 <div class="container2">
-
+    <input id="input" placeholder="Check your number here">
+    <button id="check">Submit</button>
+    <div id="result"></div>
+</div>
 </div>
 <script>
+    var numb = null;
+    var numb1 = null;
+    var numb2 = null;
+    var numb3 = null;
     document.getElementsByClassName('btn')[0].onclick = function(){
-        var numb;
         numb = Math.floor(Math.random()*(20-10)+10);
+        numb1 = Math.floor(Math.random()*(20-10)+10);
+        numb2 =Math.floor(Math.random()*(20-10)+10);
+        numb3 = Math.floor(Math.random()*(20-10)+10);
         console.log(numb);
+        console.log(numb1);
+        document.getElementsByClassName('btn')[0].disabled = "true";
         document.getElementById('numb').innerHTML = "Your  Lucky number is "+numb;
-       
-    }
+       }
+       document.getElementById('check').onclick = function(){
+           var num = document.getElementById('input').value;
+           console.log(num);
+           if(num==numb3||num==numb1||num==numb2){
+            document.getElementById('result').innerHTML = " Winner Winner Chicken Dinner ";
+            document.getElementById("mega").style.display= "none";
+           }
+           else{
+            document.getElementById('result').innerHTML = "Better Luck Next Time! ";
+           }
+           
+       }
 </script>
- 
-    
-</section>
+<div class="footer">
+    <div class="footer_in">
+     <a href="https://www.youtube.com/channel/UCrxGbgXygspoAIk5zhOClVQ" target="_blank" ><i class="fab fa-youtube" id="youtube"></i></a>
+     <a href="https://www.instagram.com/csi_akgec/" target="_blank"  ><i class="fab fa-instagram" id="insta"></i></a>
+     <a  href="https://www.facebook.com/csi.akg/" target="_blank" ><i class="fab fa-facebook-square" id="fb"></i></a>
+    </div>
+</div>
+
 </body>
 </html>
