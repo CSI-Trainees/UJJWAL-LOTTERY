@@ -63,7 +63,7 @@ ul {
   font-size: 200%;
 }
 .container1{
-  margin-top: 500px;
+  margin-top: 450px;
 }
 .container2{
   background-image: url(img.webp);
@@ -79,7 +79,7 @@ ul {
   margin-top:10px ;
 }
 #input {
-  margin-top: 500px;
+  margin-top: 450px;
   position: relative;
 margin-left: 200px;
   background-color:purple;
@@ -116,6 +116,8 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  bottom: 0px;
 }
 
 #fb{
